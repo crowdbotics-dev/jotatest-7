@@ -6,3 +6,6 @@ class Casa(models.Model):
 class Puertas(models.Model):
     'Generated Model'
     cantidad = models.IntegerField()
+class Piso(models.Model):
+    'Generated Model'
+    metros_cuadrados = models.BigIntegerField()
