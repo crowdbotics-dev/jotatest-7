@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Casa,Piso,Puertas
-from .serializers import CasaSerializer,PisoSerializer,PuertasSerializer
+from home.models import Azul,Casa,Piso,Puertas
+from .serializers import AzulSerializer,CasaSerializer,PisoSerializer,PuertasSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -47,3 +47,8 @@ class PisoViewSet(viewsets.ModelViewSet):
     serializer_class = PisoSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Piso.objects.all()
+
+class AzulViewSet(viewsets.ModelViewSet):
+    serializer_class = AzulSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Azul.objects.all()

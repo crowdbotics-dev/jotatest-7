@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Casa,Piso,Puertas
+from home.models import Azul,Casa,Piso,Puertas
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -92,4 +92,10 @@ class PisoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Piso
+        fields = "__all__"
+
+class AzulSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Azul
         fields = "__all__"

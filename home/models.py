@@ -9,3 +9,6 @@ class Puertas(models.Model):
 class Piso(models.Model):
     'Generated Model'
     metros_cuadrados = models.BigIntegerField()
+class Azul(models.Model):
+    'Generated Model'
+    cantidad = models.IntegerField()
