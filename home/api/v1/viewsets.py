@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Casa
-from .serializers import CasaSerializer
+from home.models import Casa,Puertas
+from .serializers import CasaSerializer,PuertasSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class CasaViewSet(viewsets.ModelViewSet):
     serializer_class = CasaSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Casa.objects.all()
+
+class PuertasViewSet(viewsets.ModelViewSet):
+    serializer_class = PuertasSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Puertas.objects.all()
