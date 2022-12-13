@@ -12,3 +12,6 @@ class Piso(models.Model):
 class Azul(models.Model):
     'Generated Model'
     cantidad = models.IntegerField()
+class New(models.Model):
+    'Generated Model'
+    rojo = models.BigIntegerField()
